@@ -14,6 +14,14 @@ function currentStatus(){
 
 		$('#curTemp').text(data.temp);
 		$('#targetTemp').text(data.t_heat);
+		var currentTemp = $("#extTemp").text();
+		if( currentTemp != '' ){
+			var tempDiff = data.temp-currentTemp;
+			tempDiffRound = Math.round( tempDiff * 10) / 10;
+
+			$("#tempDiff").text(tempDiffRound + " degrees colder ");
+			$("#openClose").text(" open ");
+		}
 	})
 }
 
