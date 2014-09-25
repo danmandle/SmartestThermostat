@@ -5,13 +5,13 @@ $(function() {
 });
 
 function currentStatus(){
-	console.log('yo')
 	$.ajax({
 		type: 'GET',
 		url: 'http://localhost:3000/thermostat'
 	})
 	.success(function(data){
 
-		console.log(data);
+		$('#curTemp').text(data.temp);
+		$('#targetTemp').text(data.t_heat);
 	})
 }
