@@ -25,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/thermostat', require('./routes/thermostat'));
+app.use('/weather', require('./routes/weather'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
