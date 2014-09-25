@@ -11,12 +11,9 @@
     <title>Theme Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
-    <link href="http://getbootstrap.com/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="theme.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -26,22 +23,40 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <style>
+      #openClose {
+        color: green;
+      }
+      #tempDiff {
+        color: blue;
+      }
+    </style>
   </head>
 
   <body role="document">
 
     <div class="container theme-showcase" role="main">
 
-    <h1>Data</h1>
-      <h2>In the house:</h2>
-        <h4>Temp in house: <span id='curTemp'></span></h4>
-        <h4>Target Temp: <span id='targetTemp'></span></h4>
-      <h2>Outside</h2>
-        <h4>Temp outside: <span id='extTemp'></span></h4>
-        <h4>In one hour: <span id='extTempOneHour'></span></h4>
-        <h4>In two hours: <span id='extTempTwoHours'></span></h4>
-    <h1>Target differential</h1>
-      <h2>It is <span id='tempDiff'></span> outside. You should <span id='openClose'></span> your windows.</h2>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2><span class="glyphicon glyphicon-home"></span> In the house</h2>
+            <h4>Temp in house: <span id='curTemp'></span></h4>
+            <h4>Target Temp: <span id='targetTemp'></span></h4>
+        </div>
+        <div class="col-xs-6">
+          <h2><span class="glyphicon glyphicon-tree-conifer"></span> Outside</h2>
+            <h4>Temp outside: <span id='extTemp'></span></h4>
+            <h4>In one hour: <span id='extTempOneHour'></span></h4>
+            <h4>In two hours: <span id='extTempTwoHours'></span></h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+        <h1>Target differential</h1>
+          <h2>It is <span id='tempDiff'></span> outside. You should <span id='openClose'></span> your windows.</h2>
+        </div>
+      </div>
     </div>
     <!-- /container -->
 
@@ -50,7 +65,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script src="js/thermostat.js"></script>
   </body>
 </html>
